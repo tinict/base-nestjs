@@ -14,14 +14,6 @@ import { CommonEntity } from 'src/entities';
 @Entity({ name: 'tbl_roles' })
 export class RoleEntity extends CommonEntity {
     /**
-     * role_id
-     */
-    @PrimaryGeneratedColumn('uuid', {
-        name: 'role_id',
-    })
-    RoleId: string;
-
-    /**
      * role_type
      */
     @Column({

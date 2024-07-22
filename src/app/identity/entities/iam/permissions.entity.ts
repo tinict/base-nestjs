@@ -14,14 +14,6 @@ import { RolePermissionEntity } from './role_permissions.entity';
 @Entity({ name: 'tbl_permissions' })
 export class PermissionEntity extends CommonEntity {
     /**
-     * permission_id
-     */
-    @PrimaryGeneratedColumn('uuid', {
-        name: 'permission_id',
-    })
-    PermissionId: string;
-
-    /**
      * permission_type
      */
     @Column({

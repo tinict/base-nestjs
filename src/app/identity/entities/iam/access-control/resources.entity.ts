@@ -14,14 +14,6 @@ import { ModelResourceEntity } from "./model_resoures.entity";
 @Entity({ name: 'tbl_resources' })
 export class ResourceEntity extends CommonEntity {
     /**
-     * resoure_id
-     */
-    @PrimaryGeneratedColumn('uuid', {
-        name: 'resource_id',
-    })
-    ResourceId: string;
-
-    /**
      * resource_type
      */
     @Column({

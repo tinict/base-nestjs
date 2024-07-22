@@ -14,14 +14,6 @@ import { UserPolicyEntity } from "./user_policies.entity";
 @Entity({name: 'tbl_policies'})
 export class PolicyEntity extends CommonEntity {
     /**
-     * policy_id
-     */
-    @PrimaryGeneratedColumn('uuid', {
-        name: 'policy_id'
-    })
-    PolicyId: string;
-
-    /**
      * policy_url
      */
     @Column({

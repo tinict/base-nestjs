@@ -13,14 +13,6 @@ import { PermissionEntity } from "./permissions.entity";
  */
 @Entity({name: 'tbl_role_permissions'})
 export class RolePermissionEntity extends CommonEntity {
-    /**
-     * role_permission_id
-     */
-    @PrimaryGeneratedColumn('uuid', {
-        name: 'role_permission_id',
-    })
-    role_permission_id: string;
-
     @ManyToOne(() => RoleEntity)
     @JoinColumn({
         name: 'role_id'

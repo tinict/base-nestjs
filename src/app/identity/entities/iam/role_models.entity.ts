@@ -13,14 +13,6 @@ import { CommonEntity } from 'src/entities';
  */
 @Entity({name: 'tbl_role_models'})
 export class RoleModelEntity extends CommonEntity {
-    /**
-     * role_model_id
-     */
-    @PrimaryGeneratedColumn('uuid', {
-        name: 'role_model_id',
-    })
-    RoleModelId: string;
-
     @ManyToOne(() => RoleEntity)
     @JoinColumn({
         name: 'role_id'

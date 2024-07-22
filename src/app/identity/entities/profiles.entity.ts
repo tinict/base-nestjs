@@ -15,14 +15,6 @@ import { CommonEntity } from 'src/entities';
 @Entity({ name: 'tbl_profiles' })
 export class ProfileEntity extends CommonEntity {
     /**
-     * profile_id
-     */
-    @PrimaryGeneratedColumn('uuid', {
-        name: 'profile_id',
-    })
-    profile_id: string;
-
-    /**
      * family_name
      */
     @Column({

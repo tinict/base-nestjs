@@ -1,6 +1,7 @@
 import {
     Column,
     Entity,
+    ObjectIdColumn,
     OneToMany,
     OneToOne,
     PrimaryGeneratedColumn,
@@ -17,14 +18,6 @@ import { UserResourceEntity } from './access-control/user_resoures.entity';
  */
 @Entity({ name: 'tbl_users' })
 export class UserEntity extends CommonEntity {
-    /**
-     * user_id
-     */
-    @PrimaryGeneratedColumn('uuid', {
-        name: 'user_id',
-    })
-    id: string;
-
     /**
      * username
      */

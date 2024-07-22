@@ -14,14 +14,6 @@ import { CommonEntity } from 'src/entities';
 @Entity({ name: "tbl_credentials" })
 export class CredentialEntity extends CommonEntity {
     /**
-     * credential_id
-     */
-    @PrimaryGeneratedColumn('uuid', {
-        name: 'credential_id',
-    })
-    CredentialId: string;
-
-    /**
      * password_hash
      */
     @Column({
