@@ -3,8 +3,7 @@ import {
     Column,
     Entity, 
     ManyToOne, 
-    OneToMany, 
-    PrimaryGeneratedColumn
+    OneToMany,
 } from "typeorm";
 import { UserPolicyEntity } from "./user_policies.entity";
 

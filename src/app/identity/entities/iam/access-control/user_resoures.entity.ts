@@ -4,7 +4,6 @@ import {
     Entity,
     JoinColumn,
     ManyToOne,
-    PrimaryGeneratedColumn
 } from "typeorm";
 import { UserEntity } from "../users.entity";
 import { ResourceEntity } from "./resources.entity";

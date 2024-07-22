@@ -1,10 +1,8 @@
 import {
     Column,
     Entity,
-    ObjectIdColumn,
     OneToMany,
     OneToOne,
-    PrimaryGeneratedColumn,
 } from 'typeorm';
 import { ProfileEntity } from '../profiles.entity';
 import { ModelEntity } from './models.entity';
