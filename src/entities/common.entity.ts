@@ -12,6 +12,7 @@ import {
 
 /**
  * Base system Entity
+ * - id
  * - description
  * - rec_status
  * - created_by
@@ -25,12 +26,12 @@ import {
  */
 export abstract class CommonEntity extends BaseEntity {
     /**
-     * 
+     * id
      */
     @PrimaryGeneratedColumn('uuid', {
         name: 'id',
     })
-    id: string;
+    Id: string;
 
     /**
      * Created By
@@ -40,7 +41,7 @@ export abstract class CommonEntity extends BaseEntity {
         type: 'longtext',
         nullable: true
     })
-    public description: string;
+    public Description: string;
 
     /**
      * Created By
@@ -51,7 +52,7 @@ export abstract class CommonEntity extends BaseEntity {
         length: 64,
         nullable: true
     })
-    public created_by: string;
+    public CreatedBy: string;
 
 
     /**
@@ -62,7 +63,7 @@ export abstract class CommonEntity extends BaseEntity {
         type: 'timestamp',
         nullable: true,
     })
-    public created_at: Date;
+    public CreatedAt: Date;
 
     /**
      * Deleted By
@@ -73,7 +74,7 @@ export abstract class CommonEntity extends BaseEntity {
         length: 64,
         nullable: true
     })
-    public deleted_by: string;
+    public DeletedBy: string;
 
     /**
      * Updated By
@@ -84,7 +85,7 @@ export abstract class CommonEntity extends BaseEntity {
         length: 64,
         nullable: true
     })
-    public updated_by: string;
+    public UpdatedBy: string;
 
     /**
      * Updated At
@@ -94,7 +95,7 @@ export abstract class CommonEntity extends BaseEntity {
         type: 'timestamp',
         nullable: true,
     })
-    public updated_at: Date;
+    public UpdatedAt: Date;
 
     /**
      * Record Status
@@ -105,7 +106,7 @@ export abstract class CommonEntity extends BaseEntity {
         name: 'rec_status',
         default: RecStatus.ACTIVE,
     })
-    public rec_status: RecStatus;
+    public RecStatus: RecStatus;
 
     /**
      * Deleted At
@@ -115,7 +116,7 @@ export abstract class CommonEntity extends BaseEntity {
         type: 'timestamp',
         nullable: true,
     })
-    public deleted_at: Date;
+    public DeletedAt: Date;
 
     /**
      * Display Order
@@ -125,7 +126,7 @@ export abstract class CommonEntity extends BaseEntity {
         type: 'decimal',
         nullable: true,
     })
-    public display_order: number;
+    public DisplayOrder: number;
 
     /**
      * Code
@@ -136,5 +137,5 @@ export abstract class CommonEntity extends BaseEntity {
         length: 64,
         nullable: true
     })
-    public code: string;
+    public Code: string;
 };

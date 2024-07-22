@@ -2,7 +2,6 @@ import {
     Entity,
     JoinColumn,
     ManyToOne,
-    PrimaryGeneratedColumn, 
 } from "typeorm";
 import { PermissionEntity } from "./permissions.entity";
 import { CommonEntity } from 'src/entities';

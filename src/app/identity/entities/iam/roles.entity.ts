@@ -2,7 +2,6 @@ import {
     Column,
     Entity,
     OneToMany,
-    PrimaryGeneratedColumn,
 } from "typeorm";
 import { RolePermissionEntity } from "./role_permissions.entity";
 import { RoleModelEntity } from "./role_models.entity";
