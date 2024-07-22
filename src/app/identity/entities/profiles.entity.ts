@@ -1,7 +1,6 @@
 import {
     Entity,
     Column,
-    PrimaryGeneratedColumn,
     OneToOne,
     JoinColumn
 } from 'typeorm';
@@ -15,24 +14,24 @@ import { CommonEntity } from 'src/entities';
 @Entity({ name: 'tbl_profiles' })
 export class ProfileEntity extends CommonEntity {
     /**
-     * family_name
+     * firtname
      */
     @Column({
-        name: 'family_name',
+        name: 'firtname',
         type: 'nvarchar',
         length: 35,
     })
-    family_name: string;
+    FirtName: string;
 
     /**
-     * name
+     * lastname
      */
     @Column({
-        name: 'name',
+        name: 'lastname',
         type: 'nvarchar',
         length: 50,
     })
-    name: string;
+    LastName: string;
 
     /**
      * email
@@ -42,7 +41,7 @@ export class ProfileEntity extends CommonEntity {
         type: 'varchar',
         length: 320,
     })
-    email: string;
+    Email: string;
 
     /**
      * phone
@@ -52,7 +51,7 @@ export class ProfileEntity extends CommonEntity {
         type: 'varchar',
         length: 15,
     })
-    phone: string;
+    Phone: string;
 
     /**
      * url_picture
@@ -62,7 +61,7 @@ export class ProfileEntity extends CommonEntity {
         type: 'varchar',
         length: 320,
     })
-    url_picture: string;
+    UrlPicture: string;
 
     /**
      * gender
@@ -72,7 +71,7 @@ export class ProfileEntity extends CommonEntity {
         type: 'enum',
         enum: Gender,
     })
-    gender: Gender;
+    Gender: Gender;
 
     /**
      * Date Of Birth
@@ -81,7 +80,7 @@ export class ProfileEntity extends CommonEntity {
         name: 'dob',
         type: 'datetime',
     })
-    dob: Date;
+    Dob: Date;
 
     @OneToOne(() => UserEntity)
     @JoinColumn({ name: 'user_id' })

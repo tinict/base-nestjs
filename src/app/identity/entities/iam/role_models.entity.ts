@@ -2,7 +2,6 @@ import {
     Entity, 
     JoinColumn, 
     ManyToOne,  
-    PrimaryGeneratedColumn, 
 } from "typeorm";
 import { RoleEntity } from "./roles.entity";
 import { ModelEntity } from "./models.entity";

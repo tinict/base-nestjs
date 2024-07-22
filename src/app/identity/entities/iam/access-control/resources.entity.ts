@@ -3,7 +3,6 @@ import {
     Column,
     Entity,
     OneToMany,
-    PrimaryGeneratedColumn
 } from "typeorm";
 import { UserResourceEntity } from "./user_resoures.entity";
 import { ModelResourceEntity } from "./model_resoures.entity";
