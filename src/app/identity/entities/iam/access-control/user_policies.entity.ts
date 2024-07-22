@@ -17,10 +17,10 @@ export class UserPolicyEntity extends CommonEntity {
     /**
      * user_policy_id
      */
-    @PrimaryGeneratedColumn('uuid', {
-        name: 'user_policy_id',
-    })
-    UserPolicyId: string;
+    // @PrimaryGeneratedColumn('uuid', {
+    //     name: 'user_policy_id',
+    // })
+    // UserPolicyId: string;
 
     @ManyToOne(() => PolicyEntity)
     @JoinColumn({

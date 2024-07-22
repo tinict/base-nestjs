@@ -1,4 +1,7 @@
-import { Global, Module } from '@nestjs/common';
+import { 
+    Global, 
+    Module 
+} from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Global()
@@ -10,7 +13,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
             port: 3306,
             username: 'root',
             password: 'Tin18082002',
-            database: 'db_dev',
+            database: 'base_nestjs',
             entities: [__dirname + '../../**/*.entity{.ts,.js}'],
             logging: true,
             synchronize: true,

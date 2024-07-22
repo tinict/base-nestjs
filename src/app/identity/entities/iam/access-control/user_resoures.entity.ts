@@ -14,14 +14,6 @@ import { ResourceEntity } from "./resources.entity";
  */
 @Entity({ name: 'tbl_user_resources' })
 export class UserResourceEntity extends CommonEntity {
-    /**
-     * user_resource_id
-     */
-    @PrimaryGeneratedColumn('uuid', {
-        name: 'user_resource_id',
-    })
-    UserResourceId: string;
-
     @ManyToOne(() => UserEntity)
     @JoinColumn({
         name: 'user_id',

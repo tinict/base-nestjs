@@ -18,14 +18,6 @@ import { ModelResourceEntity } from './access-control/model_resoures.entity';
 @Entity({ name: 'tbl_models' })
 export class ModelEntity extends CommonEntity {
     /**
-     * model_id
-     */
-    @PrimaryGeneratedColumn('uuid', {
-        name: 'model_id'
-    })
-    ModelId: string;
-
-    /**
      * model_type
      */
     @Column({
@@ -36,7 +28,9 @@ export class ModelEntity extends CommonEntity {
     ModelType: string;
 
     @OneToOne(() => UserEntity)
-    @JoinColumn({ name: 'user_id' })
+    @JoinColumn({ 
+        name: 'user_id' 
+    })
     User: UserEntity;
 
     @OneToMany(() => RoleModelEntity, (RoleModel) => RoleModel.Model)

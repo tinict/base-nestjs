@@ -6,6 +6,7 @@ import {
     Column,
     CreateDateColumn,
     DeleteDateColumn,
+    PrimaryGeneratedColumn,
     UpdateDateColumn
 } from "typeorm";
 
@@ -23,6 +24,14 @@ import {
  * - code
  */
 export abstract class CommonEntity extends BaseEntity {
+    /**
+     * 
+     */
+    @PrimaryGeneratedColumn('uuid', {
+        name: 'id',
+    })
+    id: string;
+
     /**
      * Created By
      */
@@ -44,7 +53,7 @@ export abstract class CommonEntity extends BaseEntity {
     })
     public created_by: string;
 
-    
+
     /**
      * Created At
      */
@@ -111,21 +120,21 @@ export abstract class CommonEntity extends BaseEntity {
     /**
      * Display Order
      */
-    // @Column({
-    //     name: 'display_order',
-    //     type: 'decimal',
-    //     nullable: true,
-    // })
-    // public display_order: number;
+    @Column({
+        name: 'display_order',
+        type: 'decimal',
+        nullable: true,
+    })
+    public display_order: number;
 
     /**
      * Code
      */
-    @Column({ 
-        name: 'code', 
-        type: 'char', 
-        length: 64, 
-        nullable: true 
+    @Column({
+        name: 'code',
+        type: 'char',
+        length: 64,
+        nullable: true
     })
     public code: string;
 };
