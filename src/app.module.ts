@@ -5,11 +5,13 @@ import {
   DatabaseModule,
   IdentityModule,
 } from './app';
+import { FistoreModule } from './app/fistore/fistore.module';
 
 @Module({
   imports: [
     IdentityModule,
     DatabaseModule,
+    FistoreModule,
   ],
   controllers: [AppController],
   providers: [AppService],
